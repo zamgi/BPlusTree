@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <!--<RetainVMGarbageCollection>true</RetainVMGarbageCollection>-->
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.5" />
+    <PackageReference Include="BenchmarkDotNet.Annotations" Version="0.13.5" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\BPlusTree\BPlusTree.csproj" />
+  </ItemGroup>  
+</Project>

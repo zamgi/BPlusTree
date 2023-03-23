@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <!--<RetainVMGarbageCollection>true</RetainVMGarbageCollection>-->
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>  
+</Project>
